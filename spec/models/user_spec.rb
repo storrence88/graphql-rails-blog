@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:name).is_at_least(2).is_at_most(32) }
     it { should validate_length_of(:password).is_at_least(6).is_at_most(24) }
 
-    it { should validate_uniquness_of(:name).case_sensative }
+    it { should validate_uniqueness_of(:name).case_insensitive }
 
     context 'username validation' do
       it 'should accept valid usernames' do
